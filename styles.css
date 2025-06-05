@@ -211,54 +211,74 @@ header {
   padding: 2rem;
 }
 @media (max-width: 768px) {
-  .header, .right .btn, .left {
+  .info-cards-vertical {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
-
-  .logo {
-    width: 30px;
+  body {
+    font-size: 1.05rem;
   }
 
   .right .btn {
-    font-size: 0.9rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 1.1rem;
+    padding: 0.6rem 1.2rem;
     width: 100%;
     margin-top: 0.5rem;
   }
 
   .overview h1,
   .intro-section h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   .overview p,
   .intro-section p {
-    font-size: 1rem;
+    font-size: 1.15rem;
+  }
+
+  .card {
+    width: 85%;
+    max-width: none;
+    font-size: 1.1rem;
+    padding: 2rem 1rem;
+  }
+
+  .card img.info-img {
+    width: 100px;
+    height: 100px;
   }
 
   .sidebar {
     width: 100%;
-    padding: 1rem;
     text-align: center;
+    padding: 1rem 0.5rem;
   }
 
-  .card {
-    width: 100%;
-    max-width: 90%;
-  }
-
-  .main-content {
-    padding: 1rem;
-  }
-
-  .image-section {
+  .sidebar nav ul {
+    display: flex;
     flex-direction: column;
-    gap: 1rem;
     align-items: center;
   }
 
   .dashboard {
     flex-direction: column;
+  }
+
+  .image-section {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .left {
+    font-size: 1.3rem;
+  }
+
+  .main-content {
+    padding: 1rem;
   }
 }
