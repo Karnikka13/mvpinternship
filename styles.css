@@ -17,6 +17,7 @@ header {
   padding: 1rem 2rem;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
 }
 
 .left {
@@ -52,6 +53,7 @@ header {
   justify-content: center;
   gap: 2rem;
   padding: 2rem;
+  flex-wrap: wrap;
 }
 
 .info-img {
@@ -80,14 +82,13 @@ header {
   color: #444;
 }
 
-
 .info-cards-vertical {
   max-width: 1200px;
   margin: 2rem auto;
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap; /* Keeps them responsive */
+  flex-wrap: wrap;
 }
 
 .card {
@@ -160,18 +161,20 @@ header {
   margin-top: 1rem;
 }
 
-
 .dashboard {
   display: flex;
   min-height: 100vh;
+  flex-direction: row;
 }
 
+/* 🟦 CONTRAST SIDEBAR */
 .sidebar {
   width: 220px;
-  background-color: #4d6a8c;
+  background-color: #1e2a38; /* dark navy-blue for contrast */
   color: white;
   padding: 2rem 1rem;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
 }
 
 .sidebar h2 {
@@ -200,13 +203,50 @@ header {
 }
 
 .sidebar nav ul li a:hover {
-  background-color: #1e5bc7;
+  background-color: #2a7ae2;
 }
-
 
 .main-content {
   flex-grow: 1;
   padding: 2rem;
 }
 
+/* 📱 MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
+  .dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 1rem;
+    box-shadow: none;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .right .btn {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .intro-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .overview h1 {
+    font-size: 1.5rem;
+  }
+
+  .overview p, .intro-section p {
+    font-size: 1rem;
+  }
+}
