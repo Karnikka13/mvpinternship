@@ -5,8 +5,7 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #a1f1a1, #a9d1a9);
+  background: linear-gradient(135deg, #171817, #a9d1a9);
   color: #333;
 }
 
@@ -282,3 +281,4 @@ header {
     padding: 1rem;
   }
 }
+
